@@ -34,7 +34,7 @@ Semantic-Ui. Basic UI styling with a nice responsive grid.
 
 
 ### Usage
--  git clone 
+-  git clone https://github.com/c-healey/openweather-hooks.git
 -  npm i
 -  npm start
 
