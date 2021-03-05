@@ -1,3 +1,43 @@
+#  Open Weather app
+
+## Description
+
+Build a simple weather forecast application based on the OpenWeatherMap API
+
+
+### Story
+
+-  Create a “Current Temperature” page that fetches and displays the current temperature
+at the user’s current location. [OpenWeather Current local weather](https://www.openweathermap.org/current)
+
+-  Add a “5 Day Temperatures” page to your application that fetches and displays the 5 day
+forecast for the user’s current location. Display all of the 3-hourly forecasts within this 5
+day period. [Open Weather 5 day forecast](https://www.openweathermap.org/forecast5)
+
+The user should be able to access this "5 Day Forecast" page from the "Current
+Temperature" page. You may choose the navigation pattern used. For example, both
+pages could be top-level tabs within your application.
+Each row in the list should display:
+● The forecast date and time
+● The forecast temperature in Fahrenheit
+● The OpenWeatherMap icon that represents the forecast weather conditions.
+
+### Implementation
+
+- Framework: Reactjs
+- Libraries: Semantic-ui, OpenWeather
+- Test: Jest, Enzyme
+
+React - A React Hooks implementation using HashRouter, Route and Link.
+
+Semantic-Ui. Basic UI styling with a nice responsive grid.
+
+
+### Usage
+-  git clone 
+-  npm i
+-  npm start
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

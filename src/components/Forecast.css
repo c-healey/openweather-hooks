@@ -1,0 +1,5 @@
+
+.forecast-card-dt-tm {
+    display:flex;
+    flex-direction:column;
+}
