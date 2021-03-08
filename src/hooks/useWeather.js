@@ -4,6 +4,7 @@ import axios from "axios";
 import useLocation from "./useLocation";
 
 const useWeather = (urlInput, lt = null, lg = null) => {
+  // console.log(`USEWEATHER lt = ${lt} lg = ${lg}`)
   const [lat, lng] = useLocation(lt, lg);
   const [response, setResponse] = useState(null);
 
@@ -19,12 +20,13 @@ const useWeather = (urlInput, lt = null, lg = null) => {
         console.log(error);
       }
     };
+    // console.log(`useWeather lat=${lat} lng = ${lng}`)
     if (lat && lng) {
       // console.log("Get weather for ", lat, lng);
       getData(`${urlInput}&lat=${lat}&lon=${lng}`);
     }
   }, [lat, lng, urlInput]);
 
-  return response;
+  return [response, lat, lng];
 };
 export default useWeather;

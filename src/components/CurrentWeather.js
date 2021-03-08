@@ -1,4 +1,4 @@
-import React, {useEffect}from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
 
 import { API_CURRENT_WEATHER_URL } from "../apis/config";
@@ -10,13 +10,10 @@ import useWeather from "../hooks/useWeather";
 const CurrentWeather = () => {
 
   let { lt, lg } = useParams();
-  
+ 
 
-  const data = useWeather(API_CURRENT_WEATHER_URL, lt, lg);
-useEffect(()=>{
-  // console.log('current weather data changed, lt, lg', lt, lg)
+  const [data, lat, lng] = useWeather(API_CURRENT_WEATHER_URL, lt, lg);
 
-}, [data, lt, lg]);
 
   if (!data || !data.current) {
     return <div>Loading...</div>;
@@ -29,7 +26,7 @@ useEffect(()=>{
   // console.log("current weather data", feels_like, temp, icon);
   return (
     <div className="ui weather-card">
-      <div className="weather-label">Current Weather</div>
+      <div className="weather-label">Current Weather </div>
       <div className="ui  weather-header">
         <div className="ball ui list">
           <div className="item">

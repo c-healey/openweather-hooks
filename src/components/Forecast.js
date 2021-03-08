@@ -7,10 +7,12 @@ import useWeather from "../hooks/useWeather";
 import "./Forecast.css";
 import "./CurrentWeather.css";
 
-const Forecast = (props) => {
+const Forecast = () => {
   let { lt, lg } = useParams();
-  // console.log('FORCAST lt, lg', lt, lg)
-  const data = useWeather(API_FORECAST_WEATHER_URL, lt, lg);
+  
+  const [data, lat, lng] = useWeather(API_FORECAST_WEATHER_URL, lt, lg);
+  console.log('FORCAST lt, lg', lt, lg, lat, lng)
+
 
   if (!data) {
     return <div>Loading...</div>;
@@ -46,7 +48,7 @@ const Forecast = (props) => {
   return (
     <div className="ui segments">
       <div className="ui segment">
-        <p>Forecast {data.city.name}</p>
+        <p>Forecast {data.city.name} </p>
       </div>
 
       <div className="ui segments">{renderForecastCard()}</div>
