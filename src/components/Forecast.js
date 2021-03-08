@@ -9,7 +9,7 @@ import "./CurrentWeather.css";
 
 const Forecast = (props) => {
   let { lt, lg } = useParams();
-  console.log('FORCAST lt, lg', lt, lg)
+  // console.log('FORCAST lt, lg', lt, lg)
   const data = useWeather(API_FORECAST_WEATHER_URL, lt, lg);
 
   if (!data) {

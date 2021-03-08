@@ -8,7 +8,7 @@ const useWeather = (urlInput, lt = null, lg = null) => {
   const [response, setResponse] = useState(null);
 
   useEffect(() => {
-    console.log("useWeather lat lng changed");
+    // console.log("useWeather lat lng changed");
     const getData = async (url) => {
       try {
         const { data } = await axios.get(url);
@@ -20,7 +20,7 @@ const useWeather = (urlInput, lt = null, lg = null) => {
       }
     };
     if (lat && lng) {
-      console.log("Get weather for ", lat, lng);
+      // console.log("Get weather for ", lat, lng);
       getData(`${urlInput}&lat=${lat}&lon=${lng}`);
     }
   }, [lat, lng, urlInput]);

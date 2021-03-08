@@ -8,7 +8,7 @@ const useLocation = (lt = null, lg = null) => {
     if (lt && lg) {
       setLat(lt);
       setLng(lg);
-      console.log("useLocation lt, lg changed set lat, lng", lt, lg);
+      // console.log("useLocation lt, lg changed set lat, lng", lt, lg);
     }
   }, [lt, lg]);
 
@@ -24,7 +24,7 @@ const useLocation = (lt = null, lg = null) => {
       );
     };
     if (!lat || !lng){ 
-      console.log("useLocation  lat, lng changed ", lat, lng);
+      // console.log("useLocation  lat, lng changed ", lat, lng);
       getLocation();}
   }, [lat, lng]);
   return [lat, lng];

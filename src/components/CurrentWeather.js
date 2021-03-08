@@ -14,7 +14,7 @@ const CurrentWeather = () => {
 
   const data = useWeather(API_CURRENT_WEATHER_URL, lt, lg);
 useEffect(()=>{
-  console.log('current weather data changed, lt, lg', lt, lg)
+  // console.log('current weather data changed, lt, lg', lt, lg)
 
 }, [data, lt, lg]);
 
