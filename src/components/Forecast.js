@@ -1,39 +1,26 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
 import { API_FORECAST_WEATHER_URL } from "../apis/config";
 
 import { flowers } from "../apis/FlowersIcons";
-import getCurrentWeather from "../apis/getCurrentWeather";
-import getLocation from "../apis/getLocation";
+import useWeather from "../hooks/useWeather";
 import "./Forecast.css";
 import "./CurrentWeather.css";
 
 const Forecast = (props) => {
-  const [data, setData] = useState(null);
-  
   let { lt, lg } = useParams();
-  const [lat, setLat] = useState(lt);
-  const [lng, setLng] = useState(lg);
-
-  lt?console.log('PARAMS', lt, lg):console.log('PARAMS UNDEFINED');
-  useEffect(() => {
-    if (!lat || !lng) {
-      getLocation(setLat, setLng);
-    }
-    if (!lat || !lng) return;
-    const initialUrl = `${API_FORECAST_WEATHER_URL}&lat=${lat}&lon=${lng}`;
-    getCurrentWeather(setData, initialUrl);
-  }, [lat, lng]);
+  console.log('FORCAST lt, lg', lt, lg)
+  const data = useWeather(API_FORECAST_WEATHER_URL, lt, lg);
 
   if (!data) {
     return <div>Loading...</div>;
   }
-  console.log("FORECAST WEATHER", data);
+  // console.log("FORECAST WEATHER", data);
 
   const renderForecastCard = () => {
     const options = { month: "numeric", day: "numeric" };
 
-    const rows = data.data.list.map((hour) => {
+    const rows = data.list.map((hour) => {
       const date = new Date(hour.dt * 1000);
 
       return (
@@ -59,7 +46,7 @@ const Forecast = (props) => {
   return (
     <div className="ui segments">
       <div className="ui segment">
-        <p>Forecast {data.data.city.name}</p>
+        <p>Forecast {data.city.name}</p>
       </div>
 
       <div className="ui segments">{renderForecastCard()}</div>

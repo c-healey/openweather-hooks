@@ -1,40 +1,32 @@
-import React, { useState, useEffect } from "react";
-import {useParams} from 'react-router-dom';
-
+import React, {useEffect}from "react";
+import { useParams } from "react-router-dom";
 
 import { API_CURRENT_WEATHER_URL } from "../apis/config";
 import { flowers } from "../apis/FlowersIcons";
 import "./CurrentWeather.css";
-import getCurrentWeather from "../apis/getCurrentWeather";
-import getLocation from "../apis/getLocation";
 
-const CurrentWeather = (props) => {
+import useWeather from "../hooks/useWeather";
+
+const CurrentWeather = () => {
+
   let { lt, lg } = useParams();
-  const [data, setData] = useState(null);
   
-  const [lat, setLat] = useState(lt);
-  const [lng, setLng] = useState(lg);
 
-  useEffect(() => {
-    
-    if (!lat || !lng) {
-      getLocation(setLat, setLng);
-    }
-    if (!lat || !lng) return;
+  const data = useWeather(API_CURRENT_WEATHER_URL, lt, lg);
+useEffect(()=>{
+  console.log('current weather data changed, lt, lg', lt, lg)
 
-    const initialUrl = `${API_CURRENT_WEATHER_URL}&lat=${lat}&lon=${lng}`;
+}, [data, lt, lg]);
 
-    getCurrentWeather(setData, initialUrl);
-  }, [lat, lng]);
-
-  if (!data || !data.data || !data.data.current) {
+  if (!data || !data.current) {
     return <div>Loading...</div>;
   }
-  console.log(data.data);
-  const { feels_like, temp, weather } = data.data.current;
+
+  const { feels_like, temp, weather } = data.current;
 
   const { icon } = weather[0];
-  console.log("current weather data", feels_like, temp, icon);
+  // console.log(data);
+  // console.log("current weather data", feels_like, temp, icon);
   return (
     <div className="ui weather-card">
       <div className="weather-label">Current Weather</div>
