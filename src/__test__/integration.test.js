@@ -2,7 +2,7 @@ import React from "react";
 import {MemoryRouter} from 'react-router-dom'
 import { mount } from "enzyme";
 import axios from "axios";
-import CurrentWeather from "components/CurrentWeather";
+
 import Forecast from 'components/Forecast';
 
 
@@ -41,36 +41,36 @@ beforeEach(() => {
 });
 afterEach(() => {});
 
-describe ('deeper tests on CurrentWeather', ()=>{
-  beforeEach(()=>{
+// describe ('deeper tests on CurrentWeather', ()=>{
+//   beforeEach(()=>{
     
-    wrapped = mount(<MemoryRouter>
-      <CurrentWeather match={{lt:51.1, lg:-83}}/>
-      </MemoryRouter>);
-    })
-    afterEach(() => {
-      wrapped.unmount();
-    });
+//     wrapped = mount(<MemoryRouter>
+//       <CurrentWeather match={{lt:51.1, lg:-83}}/>
+//       </MemoryRouter>);
+//     })
+//     afterEach(() => {
+//       wrapped.unmount();
+//     });
 
-    it("tests mocking navigator through CurrentWeather component", () => {
-  //  with match passed useParams whould have gotten the location and skipped calling the stub.
-    expect(global.navigator.geolocation.getCurrentPosition).toHaveBeenCalled();
-  });
+//     it("tests mocking navigator through CurrentWeather component", () => {
+//   //  with match passed useParams whould have gotten the location and skipped calling the stub.
+//     expect(global.navigator.geolocation.getCurrentPosition).toHaveBeenCalled();
+//   });
  
-  // Can't get past the loading... even though it console logs the data to render weather
-  // it("tests mocking axios through CurrentWeather component", () => {
-  //   
-  //   wrapped = mount(<CurrentWeather location={loc}/>);
+//   // Can't get past the loading... even though it console logs the data to render weather
+//   // it("tests mocking axios through CurrentWeather component", () => {
+//   //   
+//   //   wrapped = mount(<CurrentWeather location={loc}/>);
 
-  //   expect(axios.get).toHaveBeenCalled();
-  //   // this failed
-  //   // expect(wrapped.find('i').length).toEqual(1);
-  //   // this passed
-  //   // expect(wrapped.html()).toEqual('<div>Loading...</div>');
+//   //   expect(axios.get).toHaveBeenCalled();
+//   //   // this failed
+//   //   // expect(wrapped.find('i').length).toEqual(1);
+//   //   // this passed
+//   //   // expect(wrapped.html()).toEqual('<div>Loading...</div>');
 
-  // })
+//   // })
 
-})
+// })
 describe("deeper tests on Forecast", () => {
   beforeEach(()=>{
     

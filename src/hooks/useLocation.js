@@ -5,7 +5,7 @@ const useLocation = (lt, lg) => {
   const validLatLng = (lat, lng) => {
     const regEx = /^[-+]?([1-8]?\d(\.\d+)?|90(\.0+)?),\s*[-+]?(180(\.0+)?|((1[0-7]\d)|([1-9]?\d))(\.\d+)?)$/;
     const latlng = "" + lat + "," + lng;
-    console.log("Validate", latlng, regEx.test(latlng));
+    // console.log("Validate", latlng, regEx.test(latlng));
     return regEx.test(latlng);
   };
   const setLatLng= (lat, lng)=>{
