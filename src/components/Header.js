@@ -2,6 +2,7 @@ import React, {useEffect, useState}from "react";
 import { Link} from "react-router-dom";
 
 import SearchPlaces from './SearchPlaces'
+import './Header.css'
 const Header = () => {
   const [path, setPath] = useState('');
  
@@ -9,8 +10,10 @@ const Header = () => {
   const panTo = React.useCallback(({ lat, lng }) => {
     console.log("lat, lng", lat, lng);
     document.title = `Lat: ${lat} Lng: ${lng}`;
-  
-    window.location.hash = (`#/${[lat, lng].join('/')}`)
+    const onForecastPage = window.location.hash.split("/")
+    .filter((el) => el === "forecast" ).length;
+    setPath([lat, lng].join('/'))
+    window.location.hash = (`#/${onForecastPage?'forecast/':''}${[lat, lng].join('/')}`)
   }, []);
   
   useEffect(()=>{
@@ -27,7 +30,7 @@ const Header = () => {
   // console.log("HEADER", optionalPaths);
  
   return (
-    <div className="ui secondary pointing menu">
+    <div className="ui secondary pointing menu ow-menu">
       <Link
         to={`/${path}`}
         className="item">
