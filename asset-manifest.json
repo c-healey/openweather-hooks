@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/openweather-hooks/static/css/main.80e8c761.chunk.css",
-    "main.js": "/openweather-hooks/static/js/main.fbc6d373.chunk.js",
-    "main.js.map": "/openweather-hooks/static/js/main.fbc6d373.chunk.js.map",
+    "main.css": "/openweather-hooks/static/css/main.2ffdd42a.chunk.css",
+    "main.js": "/openweather-hooks/static/js/main.ff6d603d.chunk.js",
+    "main.js.map": "/openweather-hooks/static/js/main.ff6d603d.chunk.js.map",
     "runtime-main.js": "/openweather-hooks/static/js/runtime-main.d9f42f68.js",
     "runtime-main.js.map": "/openweather-hooks/static/js/runtime-main.d9f42f68.js.map",
     "static/css/2.8d682a32.chunk.css": "/openweather-hooks/static/css/2.8d682a32.chunk.css",
@@ -10,14 +10,14 @@
     "static/js/2.d90074c9.chunk.js.map": "/openweather-hooks/static/js/2.d90074c9.chunk.js.map",
     "index.html": "/openweather-hooks/index.html",
     "static/css/2.8d682a32.chunk.css.map": "/openweather-hooks/static/css/2.8d682a32.chunk.css.map",
-    "static/css/main.80e8c761.chunk.css.map": "/openweather-hooks/static/css/main.80e8c761.chunk.css.map",
+    "static/css/main.2ffdd42a.chunk.css.map": "/openweather-hooks/static/css/main.2ffdd42a.chunk.css.map",
     "static/js/2.d90074c9.chunk.js.LICENSE.txt": "/openweather-hooks/static/js/2.d90074c9.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.d9f42f68.js",
     "static/css/2.8d682a32.chunk.css",
     "static/js/2.d90074c9.chunk.js",
-    "static/css/main.80e8c761.chunk.css",
-    "static/js/main.fbc6d373.chunk.js"
+    "static/css/main.2ffdd42a.chunk.css",
+    "static/js/main.ff6d603d.chunk.js"
   ]
 }
