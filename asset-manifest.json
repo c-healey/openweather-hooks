@@ -1,20 +1,23 @@
 {
   "files": {
-    "main.css": "/openweather-hooks/static/css/main.4e3657c5.chunk.css",
-    "main.js": "/openweather-hooks/static/js/main.e69df1a8.chunk.js",
-    "main.js.map": "/openweather-hooks/static/js/main.e69df1a8.chunk.js.map",
+    "main.css": "/openweather-hooks/static/css/main.7452c66d.chunk.css",
+    "main.js": "/openweather-hooks/static/js/main.fbc6d373.chunk.js",
+    "main.js.map": "/openweather-hooks/static/js/main.fbc6d373.chunk.js.map",
     "runtime-main.js": "/openweather-hooks/static/js/runtime-main.d9f42f68.js",
     "runtime-main.js.map": "/openweather-hooks/static/js/runtime-main.d9f42f68.js.map",
-    "static/js/2.b90bb592.chunk.js": "/openweather-hooks/static/js/2.b90bb592.chunk.js",
-    "static/js/2.b90bb592.chunk.js.map": "/openweather-hooks/static/js/2.b90bb592.chunk.js.map",
+    "static/css/2.8d682a32.chunk.css": "/openweather-hooks/static/css/2.8d682a32.chunk.css",
+    "static/js/2.d90074c9.chunk.js": "/openweather-hooks/static/js/2.d90074c9.chunk.js",
+    "static/js/2.d90074c9.chunk.js.map": "/openweather-hooks/static/js/2.d90074c9.chunk.js.map",
     "index.html": "/openweather-hooks/index.html",
-    "static/css/main.4e3657c5.chunk.css.map": "/openweather-hooks/static/css/main.4e3657c5.chunk.css.map",
-    "static/js/2.b90bb592.chunk.js.LICENSE.txt": "/openweather-hooks/static/js/2.b90bb592.chunk.js.LICENSE.txt"
+    "static/css/2.8d682a32.chunk.css.map": "/openweather-hooks/static/css/2.8d682a32.chunk.css.map",
+    "static/css/main.7452c66d.chunk.css.map": "/openweather-hooks/static/css/main.7452c66d.chunk.css.map",
+    "static/js/2.d90074c9.chunk.js.LICENSE.txt": "/openweather-hooks/static/js/2.d90074c9.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.d9f42f68.js",
-    "static/js/2.b90bb592.chunk.js",
-    "static/css/main.4e3657c5.chunk.css",
-    "static/js/main.e69df1a8.chunk.js"
+    "static/css/2.8d682a32.chunk.css",
+    "static/js/2.d90074c9.chunk.js",
+    "static/css/main.7452c66d.chunk.css",
+    "static/js/main.fbc6d373.chunk.js"
   ]
 }
