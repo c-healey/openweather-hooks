@@ -26,7 +26,9 @@ const CurrentWeather = () => {
   // console.log("current weather data", feels_like, temp, icon);
   return (
     <div className="ui weather-card">
-      <div className="weather-label">Current Weather <p>Lat: {lat} Lng: {lng}</p></div>
+      <div className="weather-label">Current Weather 
+      {/* <p>Lat: {lat} Lng: {lng}</p> */}
+      </div>
       <div className="ui  weather-header">
         <div className="ball ui list">
           <div className="item">

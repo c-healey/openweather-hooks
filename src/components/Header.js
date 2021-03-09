@@ -30,7 +30,7 @@ const Header = () => {
   // console.log("HEADER", optionalPaths);
  
   return (
-    <div className="ui secondary pointing menu ow-menu">
+    <div className="ui secondary pointing menu stackable ow-menu">
       <Link
         to={`/${path}`}
         className="item">
