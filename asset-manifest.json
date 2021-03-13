@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/openweather-hooks/static/css/main.7165b76f.chunk.css",
-    "main.js": "/openweather-hooks/static/js/main.0ed22dff.chunk.js",
-    "main.js.map": "/openweather-hooks/static/js/main.0ed22dff.chunk.js.map",
+    "main.css": "/openweather-hooks/static/css/main.92055955.chunk.css",
+    "main.js": "/openweather-hooks/static/js/main.d939e72c.chunk.js",
+    "main.js.map": "/openweather-hooks/static/js/main.d939e72c.chunk.js.map",
     "runtime-main.js": "/openweather-hooks/static/js/runtime-main.d9f42f68.js",
     "runtime-main.js.map": "/openweather-hooks/static/js/runtime-main.d9f42f68.js.map",
     "static/css/2.8d682a32.chunk.css": "/openweather-hooks/static/css/2.8d682a32.chunk.css",
-    "static/js/2.d90074c9.chunk.js": "/openweather-hooks/static/js/2.d90074c9.chunk.js",
-    "static/js/2.d90074c9.chunk.js.map": "/openweather-hooks/static/js/2.d90074c9.chunk.js.map",
+    "static/js/2.babbad7c.chunk.js": "/openweather-hooks/static/js/2.babbad7c.chunk.js",
+    "static/js/2.babbad7c.chunk.js.map": "/openweather-hooks/static/js/2.babbad7c.chunk.js.map",
     "index.html": "/openweather-hooks/index.html",
     "static/css/2.8d682a32.chunk.css.map": "/openweather-hooks/static/css/2.8d682a32.chunk.css.map",
-    "static/css/main.7165b76f.chunk.css.map": "/openweather-hooks/static/css/main.7165b76f.chunk.css.map",
-    "static/js/2.d90074c9.chunk.js.LICENSE.txt": "/openweather-hooks/static/js/2.d90074c9.chunk.js.LICENSE.txt"
+    "static/css/main.92055955.chunk.css.map": "/openweather-hooks/static/css/main.92055955.chunk.css.map",
+    "static/js/2.babbad7c.chunk.js.LICENSE.txt": "/openweather-hooks/static/js/2.babbad7c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.d9f42f68.js",
     "static/css/2.8d682a32.chunk.css",
-    "static/js/2.d90074c9.chunk.js",
-    "static/css/main.7165b76f.chunk.css",
-    "static/js/main.0ed22dff.chunk.js"
+    "static/js/2.babbad7c.chunk.js",
+    "static/css/main.92055955.chunk.css",
+    "static/js/main.d939e72c.chunk.js"
   ]
 }
