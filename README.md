@@ -35,9 +35,21 @@ Semantic-Ui. Basic UI styling with a nice responsive grid.
 
 
 ### Usage
+
+3 keys are required to run this app
+-  [Open Weather default key] (https://openweathermap.org/full-price#current)
+-  [Open Weather 3 to 5 day forecast key] (https://openweathermap.org/price)
+-  [Google maps places api] (https://console.developers.google.com/)
+
+
 -  git clone https://github.com/c-healey/openweather-hooks.git
 -  npm i
 -  npm start
+-  create a new file in the project root directory named .env and add the following api keys (links below)
+
+REACT_APP_OPEN_WEATHER_DEFAULT_KEY=['YOUR_OPEN_WEATHER_DEFAULT_API_KEY']
+REACT_APP_OPEN_WEATHER_FORECAST_KEY=['YOUR_OPEN_WEATHER_FORECAST_API_KEY']
+REACT_APP_GOOGLE_MAPS_KEY=['YOUR_GOOGLE_MAPS_API_KEY']
 
 # Getting Started with Create React App
 

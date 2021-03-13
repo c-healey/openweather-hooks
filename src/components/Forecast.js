@@ -1,28 +1,21 @@
-import React from "react";
-import { useParams } from "react-router-dom";
-import { API_FORECAST_WEATHER_URL } from "../apis/config";
+import React, { useContext } from "react";
 
 import { flowers } from "../apis/FlowersIcons";
-import useWeather from "../hooks/useWeather";
 import "./Forecast.css";
 import "./CurrentWeather.css";
+import { ForecastWeatherContext } from "contexts/ForecastWeatherContext";
 
 const Forecast = () => {
-  let { lt, lg } = useParams();
-  
-  const [data, lat, lng] = useWeather(API_FORECAST_WEATHER_URL, lt, lg);
-  console.log('FORCAST lt, lg', lt, lg, lat, lng)
+  const [forecastWeather] = useContext(ForecastWeatherContext);
 
-
-  if (!data) {
+  if (!forecastWeather) {
     return <div>Loading...</div>;
   }
-  // console.log("FORECAST WEATHER", data);
 
   const renderForecastCard = () => {
     const options = { month: "numeric", day: "numeric" };
 
-    const rows = data.list.map((hour) => {
+    const rows = forecastWeather.list.map((hour) => {
       const date = new Date(hour.dt * 1000);
 
       return (
@@ -48,7 +41,7 @@ const Forecast = () => {
   return (
     <div className="ui segments">
       <div className="ui segment">
-        <p>Forecast {data.city.name} </p>
+        <p>Forecast {forecastWeather.city.name} </p>
       </div>
 
       <div className="ui segments">{renderForecastCard()}</div>

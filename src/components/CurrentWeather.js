@@ -1,33 +1,25 @@
-import React from "react";
-import { useParams } from "react-router-dom";
+import React, { useContext } from "react";
 
-import { API_CURRENT_WEATHER_URL } from "../apis/config";
+import { CurrentWeatherContext } from "contexts/CurrentWeatherContext";
 import { flowers } from "../apis/FlowersIcons";
 import "./CurrentWeather.css";
 
-import useWeather from "../hooks/useWeather";
-
 const CurrentWeather = () => {
+  const [currentWeather] = useContext(CurrentWeatherContext);
 
-  let { lt, lg } = useParams();
- 
-
-  const [data, lat, lng] = useWeather(API_CURRENT_WEATHER_URL, lt, lg);
-
-
-  if (!data || !data.current) {
+  if (!currentWeather || !currentWeather.current) {
     return <div>Loading...</div>;
   }
 
-  const { feels_like, temp, weather } = data.current;
+  const { feels_like, temp, weather } = currentWeather.current;
 
   const { icon } = weather[0];
-  // console.log(data);
-  // console.log("current weather data", feels_like, temp, icon);
+
   return (
     <div className="ui weather-card">
-      <div className="weather-label">Current Weather 
-      {/* <p>Lat: {lat} Lng: {lng}</p> */}
+      <div className="weather-label">
+        Current Weather
+        {/* <p>Lat: {lat} Lng: {lng}</p> */}
       </div>
       <div className="ui  weather-header">
         <div className="ball ui list">

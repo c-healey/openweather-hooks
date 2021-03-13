@@ -24,7 +24,7 @@ const SearchPlaces=({ panTo }) =>{
   });
 
   if (loadError) return "Error loading maps";
-  if (!isLoaded) return "Loading maps";
+  if (!isLoaded) return "Loading Search";
 
   return <div><Search panTo={panTo} /></div>;
 }
@@ -45,7 +45,7 @@ export const Search= ({ panTo }) =>{
       radius: 200 * 1000,
     },
   });
-  console.log('SEARCH')
+ 
 
   return (
     <div className="search">
@@ -75,8 +75,7 @@ export const Search= ({ panTo }) =>{
           <ComboboxList>
             {status === "OK" &&
               data.map(({ description }, id) => {
-                // data.map((el) => {
-                // console.log('key = ', el);
+              
                 return (
                   <ComboboxOption key={id} value={description}></ComboboxOption>
                 );
